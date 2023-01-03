@@ -4,7 +4,6 @@ export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = ({ target }) => {
-    console.log(target)
     setInputValue(target.value);
   }
 
