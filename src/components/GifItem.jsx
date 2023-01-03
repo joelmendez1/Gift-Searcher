@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const GifItem = ({url, title}) => {
   if(title.length > 1) {
     return (
