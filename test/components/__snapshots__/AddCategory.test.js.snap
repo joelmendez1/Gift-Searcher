@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in AddCategory component should match snapshot 1`] = `
+<div>
+  <form>
+    <input
+      placeholder="Buscar gifs"
+      type="text"
+      value=""
+    />
+  </form>
+</div>
+`;
