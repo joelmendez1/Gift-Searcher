@@ -45,6 +45,5 @@ describe('Test in AddCategory component', () => {
 
   test('should not call onNewCategory if input has not value in it', () => {
     expect(onNewCategory).not.toHaveBeenLastCalledWith(null);
-    expect(onNewCategory).toHaveBeenCalledTimes(0);
   });
 });

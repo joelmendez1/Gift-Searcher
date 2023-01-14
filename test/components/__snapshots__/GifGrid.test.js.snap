@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests in GifGrid component should match snapshot when loading is false 1`] = `
+<div>
+  <h3>
+    One Punch
+  </h3>
+  <div
+    class="card-grid"
+  >
+    <div
+      class="card"
+    >
+      <img
+        alt="One Punch"
+        src="Mock URL OP"
+      />
+      <p>
+        One Punch
+      </p>
+    </div>
+    <div
+      class="card"
+    >
+      <img
+        alt="Dragon Ball"
+        src="Mock URL DB"
+      />
+      <p>
+        Dragon Ball
+      </p>
+    </div>
+    <div
+      class="card"
+    >
+      <img
+        alt="Attack on Titan"
+        src="Mock URL AOT"
+      />
+      <p>
+        Attack on Titan
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`tests in GifGrid component should match snapshot when loading is true 1`] = `
+<div>
+  <h2>
+    Gifs cargando...
+  </h2>
+</div>
+`;
