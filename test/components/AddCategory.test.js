@@ -3,7 +3,8 @@ import { fireEvent, render, screen } from "@testing-library/react";
 
 
 describe('Test in AddCategory component', () => {
-  const onNewCategory = () => { };
+  const inputValue = "Saitama";
+  const onNewCategory = jest.fn();
 
   test('should match snapshot', () => {
     const { container } = render
@@ -21,8 +22,29 @@ describe('Test in AddCategory component', () => {
       )
     const input = screen.getByRole('textbox');
 
-    fireEvent.input(input, { target: { value: "Saitama" } });
+    fireEvent.input(input, { target: { value: inputValue } });
 
     expect(input.value).toBe("Saitama");
+  });
+
+  test('should call onNewCategory if input has a value', () => {
+    render
+      (
+        <AddCategory onNewCategory={onNewCategory} />
+      )
+
+    const input = screen.getByRole('textbox');
+    const form = screen.getByRole('form');
+
+    fireEvent.input(input, { target: { value: inputValue } });
+    fireEvent.submit(form);
+
+    expect(input.value).toBe('');
+    expect(onNewCategory).toHaveBeenLastCalledWith(inputValue);
+  });
+
+  test('should not call onNewCategory if input has not value in it', () => {
+    expect(onNewCategory).not.toHaveBeenLastCalledWith(null);
+    expect(onNewCategory).toHaveBeenCalledTimes(0);
   });
 });

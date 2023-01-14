@@ -2,7 +2,9 @@
 
 exports[`Test in AddCategory component should match snapshot 1`] = `
 <div>
-  <form>
+  <form
+    aria-label="form"
+  >
     <input
       placeholder="Buscar gifs"
       type="text"
